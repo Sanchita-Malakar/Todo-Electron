@@ -1,0 +1,45 @@
+{
+  "name": "todo-electron",
+  "version": "1.0.0",
+  "description": "Simple Todo App with Electron",
+  "main": "main.js",
+  "author": "Sanchita Malakar",
+  "license": "ISC",
+  "keywords": [],
+
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . TodoApp",
+    "build": "electron-builder"
+  },
+
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2"
+  },
+
+  "dependencies": {
+    "electron-auto-launch": "^5.0.7"
+  },
+
+  "build": {
+    "appId": "com.todo.electron",
+    "productName": "Todo App",
+    "directories": {
+      "buildResources": "assets"   
+    },      
+    "win": {
+      "target": "nsis",
+      "icon": "assets/trddy.ico"          
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false
+    }
+  }
+
+}
+
+
